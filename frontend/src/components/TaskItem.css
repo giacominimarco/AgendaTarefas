@@ -1,28 +1,29 @@
 /* Estilos do item de tarefa */
 .task-item {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   border-radius: 8px;
   padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
   position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .task-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .task-item.concluída {
   opacity: 0.8;
-  background: rgba(40, 167, 69, 0.1);
-  border-color: rgba(40, 167, 69, 0.3);
+  background: rgba(40, 167, 69, 0.15);
+  border-color: rgba(40, 167, 69, 0.4);
 }
 
 .task-item.overdue {
-  border-color: rgba(220, 53, 69, 0.5);
-  background: rgba(220, 53, 69, 0.1);
+  border-color: rgba(220, 53, 69, 0.6);
+  background: rgba(220, 53, 69, 0.15);
 }
 
 /* Conteúdo da tarefa */
@@ -45,17 +46,19 @@
   font-weight: 600;
   margin: 0;
   flex: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .task-status {
   font-size: 1.2rem;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
 }
 
 .task-description {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   font-size: 0.95rem;
   line-height: 1.5;
   margin: 0;
@@ -66,7 +69,7 @@
   flex-direction: column;
   gap: 0.5rem;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .task-date,
@@ -93,11 +96,12 @@
   border: none;
   border-radius: 4px;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
   flex: 1;
   min-width: 80px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .complete-btn {
@@ -107,6 +111,8 @@
 
 .complete-btn:hover:not(:disabled) {
   background: #218838;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
 }
 
 .edit-btn {
@@ -116,6 +122,8 @@
 
 .edit-btn:hover:not(:disabled) {
   background: #e0a800;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
 }
 
 .delete-btn {
@@ -125,10 +133,12 @@
 
 .delete-btn:hover:not(:disabled) {
   background: #c82333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
 }
 
 .task-actions button:disabled {
-  opacity: 0.6;
+  opacity: 0.7;
   cursor: not-allowed;
 }
 
@@ -147,29 +157,33 @@
 
 .task-edit label {
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .task-edit input,
 .task-edit textarea {
   padding: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
   font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .task-edit input::placeholder,
 .task-edit textarea::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .task-edit input:focus,
 .task-edit textarea:focus {
   outline: none;
-  border-color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .edit-actions {
@@ -183,13 +197,16 @@
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   flex: 1;
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
 }
 
 .save-btn:hover:not(:disabled) {
   background: #218838;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.4);
 }
 
 .cancel-btn {
@@ -198,18 +215,21 @@
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   flex: 1;
+  box-shadow: 0 2px 4px rgba(108, 117, 125, 0.3);
 }
 
 .cancel-btn:hover:not(:disabled) {
   background: #5a6268;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(108, 117, 125, 0.4);
 }
 
 .save-btn:disabled,
 .cancel-btn:disabled {
-  opacity: 0.6;
+  opacity: 0.7;
   cursor: not-allowed;
 }
 
@@ -219,19 +239,20 @@
   padding: 0.75rem;
   border-radius: 4px;
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .message.success {
-  background: rgba(40, 167, 69, 0.1);
-  border: 1px solid rgba(40, 167, 69, 0.3);
+  background: rgba(40, 167, 69, 0.2);
+  border: 1px solid rgba(40, 167, 69, 0.5);
   color: #28a745;
 }
 
 .message.error {
-  background: rgba(220, 53, 69, 0.1);
-  border: 1px solid rgba(220, 53, 69, 0.3);
+  background: rgba(220, 53, 69, 0.2);
+  border: 1px solid rgba(220, 53, 69, 0.5);
   color: #dc3545;
 }
 
