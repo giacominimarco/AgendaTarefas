@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './TaskForm.css';
 
 const TaskForm = ({ onAddTask }) => {
@@ -9,6 +9,17 @@ const TaskForm = ({ onAddTask }) => {
   });
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
+
+  // Timer para desaparecer mensagem
+  useEffect(() => {
+    if (message) {
+      const timer = setTimeout(() => {
+        setMessage('');
+      }, 3000); // 3 segundos
+
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
