@@ -30,34 +30,6 @@ Uma aplicação completa de gerenciamento de tarefas desenvolvida com **React** 
 - **MySQL** - Banco de dados relacional
 - **MySQL Connector** - Driver para conexão com MySQL
 
-## 📁 Estrutura do Projeto
-
-```
-AgendaTarefas/
-├── backend/
-│   ├── controllers/
-│   │   └── task_controller.py
-│   ├── database/
-│   │   └── connection.py
-│   ├── models/
-│   │   └── task.py
-│   ├── server.py
-│   ├── requirements.txt
-│   └── .env
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── TaskForm.js
-│   │   │   ├── TaskList.js
-│   │   │   └── TaskItem.js
-│   │   ├── App.js
-│   │   └── App.css
-│   ├── package.json
-│   └── public/
-├── schema.sql
-└── README.md
-```
-
 ## 🛠️ Instalação e Configuração
 
 ### Pré-requisitos
@@ -237,15 +209,7 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 ## 👨‍💻 Autor
 
 **Seu Nome**
-- GitHub: [@seu-usuario](https://github.com/seu-usuario)
-- LinkedIn: [Seu Nome](https://linkedin.com/in/seu-perfil)
-
-## 🙏 Agradecimentos
-
-- Comunidade React
-- Comunidade Python
-- Stack Overflow
-- Documentação oficial das tecnologias utilizadas
+- LinkedIn: [Marco Giacomini](https://www.linkedin.com/in/marco-giacomini/)
 
 ---
 
